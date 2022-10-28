@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image:url("gd1.jpg"); */
+            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+           
+        }
+        section{
+height:480px;
+width:480px;
+
+margin-left: 30%;
+display:grid;
+grid-template-columns: 16.5% 16.5% 16.5% 16.5%  16.5% 18%;
+border:50px solid white;
+border-left : 30px solid black;
+border-right:30px solid  black;
+/* border-radius: 30px ; */
+/* margin-bottom: 100%; */
+
+        }
+        .title{
+            
+            height:80px;
+            width:80px;
+
+            background-image: url("wood2.png");
+         background-size:80px 80px;
+         background-color:#76D7EA;
+            display: flex;
+            border:2px solid white;
+        }
+      
+       .miss{
+height:80px;width:80px;
+        background-image:url("cross.gif") ;
+        background-size:80px 80px;
+       
+       
+      
+       }
+       .danger{
+        height:80px;width:80px;
+        background-image:url("gameover.jpg") ;
+        background-size:80px 80px;
+       
+       }
+       .treasure{
+        height:80px;width:80px;
+        background-image:url("chest.png") ;
+        background-size:80px 80px;
+       
+        padding:1px;
+       }
+       #score{
+
+        font-size: 30px; 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+        border:2px solid white;
+       }
+       #score1{
+      
+        font-size: 30px; 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border:2px solid ;
+
+       }
+       .yo{
+        display: inline-block;
+        color:yellow;
+        background-color: red;
+      
+       }
+    </style>
+</head>
+<body>
+
+    <marquee behavior="scroll" direction="right">
+
+        <span  class="yo" id="score">
+            score -
+           </span>
+           <!-- <br> -->
+           <span  class ="yo" id="score1">
+              0
+           </span>
+
+    </marquee>
+   
+<section>
+    <div class="title"  id="1"  onclick="myFunction(id)"></div>
+    <div class="title"  id="2"  onclick="myFunction(id)"></div>
+    <div class="title"  id="3"  onclick="myFunction(id)"></div>
+    <div class="title"  id="4"  onclick="myFunction(id)"></div>
+    <div class="title"  id="5"  onclick="myFunction(id)"></div>
+    <div class="title"  id="6"  onclick="myFunction(id)"></div>
+    <div class="title"  id="7"  onclick="myFunction(id)"></div>
+    <div class="title"  id="8"  onclick="myFunction(id)"></div>
+    <div class="title"  id="9"  onclick="myFunction(id)"></div>
+    <div class="title"  id="10"  onclick="myFunction(id)"></div>
+    <div class="title"  id="11"  onclick="myFunction(id)"></div>
+    <div class="title"  id="12"  onclick="myFunction(id)"></div>
+    <div class="title"  id="13"  onclick="myFunction(id)"></div>
+    <div class="title"  id="14"  onclick="myFunction(id)"></div>
+    <div class="title"  id="15"  onclick="myFunction(id)"></div>
+    <div class="title"  id="16"  onclick="myFunction(id)"></div>
+    <div class="title"  id="17"  onclick="myFunction(id)"></div>
+    <div class="title"  id="18"  onclick="myFunction(id)"></div>
+    <div class="title"  id="19"  onclick="myFunction(id)"></div>
+    <div class="title"  id="20"  onclick="myFunction(id)"></div>
+    <div class="title"  id="21"  onclick="myFunction(id)"></div>
+    <div class="title"  id="22"  onclick="myFunction(id)"></div>
+    <div class="title"  id="23"  onclick="myFunction(id)"></div>
+    <div class="title"  id="24"  onclick="myFunction(id)"></div>
+    <div class="title"  id="25"  onclick="myFunction(id)"></div>
+    <div class="title"  id="26"  onclick="myFunction(id)"></div>
+    <div class="title"  id="27"  onclick="myFunction(id)"></div>
+    <div class="title"  id="28"  onclick="myFunction(id)"></div>
+    <div class="title"  id="29"  onclick="myFunction(id)"></div>
+    <div class="title"  id="30"  onclick="myFunction(id)"></div>
+    <div class="title"  id="31"  onclick="myFunction(id)"></div>
+    <div class="title"  id="32"  onclick="myFunction(id)"></div>
+    <div class="title"  id="33"  onclick="myFunction(id)"></div>
+    <div class="title"  id="34"  onclick="myFunction(id)"></div>
+    <div class="title"  id="35"  onclick="myFunction(id)"></div>
+    <div class="title"  id="36"  onclick="myFunction(id)"></div>
+ 
+    
+
+</section>
+
+<script>
+
+var click=0;
+var array = ["1","2","3","4","5","6","7","8","9"];
+
+// var my= document.getElementById(danger);
+// alert(my);
+
+
+    var chest1 = 0;
+    var chest2  =0;
+    var x=0;
+    while(x==0)
+    {
+        chest1 = Math.floor(Math.random() * 35)+1;
+        x++;
+    }
+    x=0;
+    while(x==0)
+    {
+        chest2 = Math.floor(Math.random() * 35)+1;
+        if(chest2!=chest1)
+        x++;
+    }
+    x=0;
+    while(x==0)
+    {
+        chest3 = Math.floor(Math.random() * 35)+1;
+
+        if(chest3!=chest1 & chest3!=chest2)
+        x++;
+        
+    }
+    var danger=0;
+    var k=0;
+    while(k==0){
+    danger= Math.floor(Math.random() * 35)+1;
+
+        if(danger!=chest1 & danger!=chest2 & danger!=chest3){
+            k++;
+        }
+    }
+
+var o=0;
+function myFunction(id) {
+// prompt("thi sis ",id);
+click=click+1;
+if(id==chest1 || id==chest2 || id==chest3)
+{
+    o=o+1;
+  const b= document.getElementById(id).className="treasure";
+   
+	const  btn1=document.getElementById("score1")
+	
+	   btn1.textContent=o;
+
+   
+    if(o==3)
+    { setTimeout(function(){
+
+        alert("you win !!!!!  in "+click+" clicks");
+location.reload(true);
+},50);
+    }
+
+   
+}
+ else if(id==danger)
+   {
+    const btn = document.getElementById(id).className ="danger";
+    o=0;
+    // btn.style.backgroundColor="black";
+    // btn.textContent="MISS";
+    // btn.style.color="white";
+
+    setTimeout(function(){
+    alert("game over !!! you lose");
+   location.reload(true);
+
+   },50)
+   }
+   else{
+    document.getElementById(id).className="miss";
+   }
+
+}
+
+
+
+
+
+</script>
+</body>
+</html>

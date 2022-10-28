@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("wall5.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #play1{
+          height: 60px;
+          width: 100px;
+            margin-left: 40%;
+            margin-top: 20%;
+            padding:10px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-color:lime;
+            font-size: 13px;
+            
+            
+        }
+        #play1:hover{
+          background-color:black;
+        color:lime;
+        border:5px solid lime;
+        
+        }
+        #play1:hover span {
+  display:none;
+  
+ 
+}
+#play1:hover:before {
+  content:"3 x 3";
+  
+  }
+
+
+        #play2{
+          height: 60px;
+          width: 100px;
+            padding:10px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-color:yellow;
+            font-size: 13px;
+        }
+        #play2:hover{
+          background-color:black;
+        color:yellow;
+        border:5px solid yellow;
+        }
+        #play2:hover span {
+  display:none
+}
+#play2:hover:before {
+  content:"4 x 4";
+}
+        #play3{
+          height: 60px;
+          width: 100px;
+       padding:10px;
+       border: 3px solid white;
+       border-radius: 15px;
+       background-color:red;
+       font-size: 13px;
+
+   }
+   #play3:hover{
+          background-color:black;
+        color:red;
+        border:5px solid red;
+        }
+   #play3:hover span {
+  display:none
+}
+#play3:hover:before {
+  content:"6 x 6";
+}
+
+  #level{
+    color:goldenrod;
+    font-size:40px;
+    margin-left: 550px;
+    
+
+  }
+
+    </style>
+</head>
+<body>
+
+  <div id = "level">
+    Choose-Level
+  </div>
+    <a href="easy.html"><button id ="play1">  <span>  EASY</span> </button></a>
+    <a href="medium.html"><button id ="play2"><span>MEDIUM</span></button></a>
+    <a href="hard.html"><button id ="play3"><span>HARD</span></button></a>
+
+    <!-- <img src="colorbomb.gif" alt=""> -->
+    <script>
+
+    
+    </script>
+</body>
+</html>
